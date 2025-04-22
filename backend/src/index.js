@@ -11,7 +11,7 @@ import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
 import { app, server } from "./lib/socket.js";
 
-try {
+
   dotenv.config();
 
   const PORT = process.env.PORT;
@@ -42,7 +42,3 @@ try {
     console.log("server is running on PORT:" + PORT);
     connectDB();
   });
-} catch (err) {
-  console.error("🔥 Global Boot Error:", err.message);
-  process.exit(1);
-}
